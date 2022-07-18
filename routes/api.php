@@ -32,7 +32,7 @@ Route::post('/login', [UserController::class, 'login']);
 
 Route::middleware(['jwt.auth'])->group(function(){
 
-    //Insert Data
+    //Create Data
     Route::post('/input', [ProductController::class, 'Input']);
     //Read Data
     Route::get('/show', [ProductController::class, 'showAll']);
